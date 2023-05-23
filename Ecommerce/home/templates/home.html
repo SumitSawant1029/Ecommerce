@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,9 +9,18 @@
 
 </head>
 <body>
-    <nav class="navbar bg-primary" data-bs-theme="dark">
-        <a>Home</a>
-    </nav>
+    <nav style="height:66px;" class="navbar bg-primary" data-bs-theme="dark">
 
+        <img src="/img.jpg" width="50" height="50">
+        <a style="width:10%;position:absolute;left:100px;color : white;text-decoration: none;"href="{% url 'log' %}">Home</a>
+        <a style="width :10%;position:absolute;left:200px;color : white;">Shop</a>
+        <a style="width :10%;position:absolute;left:300px;color : white;">Orders</a>
+        <a style="width :10%;position:absolute;left:400px;color : white;">Customer Care</a>
+        <a  style="width :10%;position:absolute;left:550px;color : white;">Category</a>
+        <a style="width :10%;position:absolute;right:0%;color : white; text-decoration: none;" href="{% url 'login' %}">Log In</a>
+
+    </nav>
+     <img src="{% static 'img.jpg'%}">
+     {% block content %} {% endblock %}
 </body>
 </html>
